@@ -1,0 +1,54 @@
+body {
+  background-color: rgb(245, 245, 245);
+  font-family: sans-serif;
+}
+
+li {
+  background-color: rgb(165, 204, 218);
+  list-style-type: none;
+  padding: 1em;
+}
+
+li:nth-child(even) {
+  background-color: rgb(173, 216, 230);
+}
+
+ input[type="checkbox"]:checked+label{
+     display:list-item;
+     /* display:list-item; */
+     /* padding: 0.5em; */
+     /* background-color: salmon; */
+  background-color: rgb(226, 226, 226);
+  /* color: rgb(114, 250, 155); */
+  text-decoration: line-through;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+label {
+    padding: 1em;
+    /* padding: 1em 0em 1em 20px; */
+  padding-left: 20px;
+}
+
+label::before {
+  margin-right: 1em;
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url(images/unchecked_16.png);
+}
+
+input[type="checkbox"]:checked + label::before {
+  background-image: url(images/checked_16.png);
+  /* text-decoration: line-through; */
+}
+
+label::after {
+  margin-left: 1em;
+  content: "\2717";
+  color: red;
+}
